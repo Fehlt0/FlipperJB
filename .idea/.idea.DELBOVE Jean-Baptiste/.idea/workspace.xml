@@ -5,16 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d9158b94-7fde-4228-ba31-bb4316c0cabd" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.DELBOVE Jean-Baptiste/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.DELBOVE Jean-Baptiste/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Bumper Assassin.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Bumper Assassin.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Bumper Berserker 1.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Bumper Berserker 1.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Bumper Berserker.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Bumper Berserker.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level1.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/BumperBerserker.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/BumperBerserker.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/BumperTank.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/BumperTank.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Necro.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Necro.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/default-6000.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/default-6000.dwlt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Ball.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Ball.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -155,7 +146,7 @@
       <workItem from="1765033601729" duration="1120000" />
       <workItem from="1765184841847" duration="8690000" />
       <workItem from="1766155982681" duration="1680000" />
-      <workItem from="1767790422222" duration="5561000" />
+      <workItem from="1767790422222" duration="6422000" />
     </task>
     <servers />
   </component>

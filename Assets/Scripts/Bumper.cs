@@ -6,7 +6,6 @@ using UnityEngine;
 public class Bumper : MonoBehaviour
 {
     [SerializeField] float strength = 10f;
-    [SerializeField] private int score = 10;
     [SerializeField] private int power;
     
     [SerializeField] private GameObject menu;
@@ -30,7 +29,6 @@ public class Bumper : MonoBehaviour
         
         other.rigidbody.AddForce(direction * strength);
         
-        ScoreManager.instance.AddScore(score);
         other.gameObject.GetComponent<Ball>().LoseBallLife(power);
         
         
