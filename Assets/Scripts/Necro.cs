@@ -23,8 +23,7 @@ public class Necro : MonoBehaviour
         for (int i = 0; i < 3; i++)
         {
             Instantiate(skeleton, spawnList[i].transform.position, Quaternion.identity, null);
-            GameManager.ennemisVivants += 1;
-            Debug.Log(GameManager.ennemisVivants);
+            
         }
         StartCoroutine(WaitForSkeletonSpawn());
         

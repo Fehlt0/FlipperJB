@@ -51,13 +51,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   strength: 300
   score: 10
-  anim: {fileID: 7633648982454489479}
-  bumperSpawn: {fileID: 0}
   power: 2
   menu: {fileID: 0}
   menuOpen: 1
   bumperChevalier: {fileID: 0}
   bumperAssassin: {fileID: 0}
+  bumperPretre: {fileID: 0}
+  bumperTank: {fileID: 0}
+  bumperBerserk: {fileID: 0}
+  isChanged: 0
 --- !u!114 &8709386480410130787
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -72,9 +74,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxTouched: 1
   parent: {fileID: 0}
-  rotationSpeed: 0
-  rotationSpeedBase: 1
-  rotationSpeedBerserk: 2
+  berserkTime: 7
+  animationBase: {fileID: 0}
+  animationBerserk: {fileID: 0}
 --- !u!54 &7973183304042193071
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -239,6 +241,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3158585820764589014}
+  - component: {fileID: 6034298471628570458}
   m_Layer: 0
   m_Name: Bumper Berserker 1
   m_TagString: Untagged
@@ -262,6 +265,22 @@ Transform:
   - {fileID: 1781275177684412524}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!111 &6034298471628570458
+Animation:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5029808434140572006}
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Animation: {fileID: 0}
+  m_Animations: []
+  m_WrapMode: 0
+  m_PlayAutomatically: 1
+  m_AnimatePhysics: 0
+  m_UpdateMode: 0
+  m_CullingType: 0
 --- !u!1 &5612895060851948716
 GameObject:
   m_ObjectHideFlags: 0
@@ -386,7 +405,6 @@ MonoBehaviour:
   strength: 100
   score: 10
   menu: {fileID: 0}
-  menuOpen: 0
   power: 0
 --- !u!1 &7568680421256864556
 GameObject:
@@ -512,5 +530,4 @@ MonoBehaviour:
   strength: 100
   score: 10
   menu: {fileID: 0}
-  menuOpen: 0
   power: 0

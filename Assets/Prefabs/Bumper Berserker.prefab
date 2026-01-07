@@ -201,9 +201,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxTouched: 7
   parent: {fileID: 0}
-  rotationSpeed: 0
-  rotationSpeedBase: 1
-  rotationSpeedBerserk: 2
+  berserkTime: 7
+  animationBase: {fileID: 7400000, guid: ad03113a95a18884491bf4625c5db462, type: 2}
+  animationBerserk: {fileID: 7400000, guid: 12667c2a8db4fc549b6fceddecd5ca04, type: 2}
 --- !u!1 &6829392580550231652
 GameObject:
   m_ObjectHideFlags: 0
@@ -213,6 +213,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7796348898737300131}
+  - component: {fileID: 5824160398855820287}
   m_Layer: 0
   m_Name: Bumper Berserker
   m_TagString: Untagged
@@ -236,6 +237,23 @@ Transform:
   - {fileID: 8485411852315177662}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!111 &5824160398855820287
+Animation:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6829392580550231652}
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Animation: {fileID: 7400000, guid: ad03113a95a18884491bf4625c5db462, type: 2}
+  m_Animations:
+  - {fileID: 7400000, guid: ad03113a95a18884491bf4625c5db462, type: 2}
+  m_WrapMode: 0
+  m_PlayAutomatically: 1
+  m_AnimatePhysics: 0
+  m_UpdateMode: 0
+  m_CullingType: 0
 --- !u!1001 &7427374300132142742
 PrefabInstance:
   m_ObjectHideFlags: 0

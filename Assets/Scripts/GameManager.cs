@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using Unity.VisualScripting;
@@ -11,8 +12,13 @@ public class GameManager : MonoBehaviour
     [SerializeField] private int life = 3;
     [SerializeField] private Transform spawnPoint;
     [SerializeField] private List<GameObject> listeEnnemis;
-    [SerializeField] public static int ennemisVivants = 0;
+    [SerializeField] private GameObject wall;
     private int i = 0;
+    
+    private int nbTankTouched;
+    [SerializeField] private int maxTankTouched = 5;
+    
+    
     
     private void Awake()
     {
@@ -32,7 +38,6 @@ public class GameManager : MonoBehaviour
         //Debug.Log("Lose Ball");
 
         life--;
-        ennemisVivants -= 1;
 
         if (life < 1)
         {
@@ -56,18 +61,36 @@ public class GameManager : MonoBehaviour
     
     public void SpawnBall()
     {
-        if (i == listeEnnemis.Count && ennemisVivants == 0)
+        if (i == listeEnnemis.Count)
         {
             Win();
         }
         else if (i < listeEnnemis.Count)
         {
-            ennemisVivants += 1;
-            Debug.Log(ennemisVivants);
             Instantiate(listeEnnemis[i], spawnPoint.position, Quaternion.identity, transform);
             i++;
         }
         
+    }
+
+    public void WallAppartition()
+    {
+        if (nbTankTouched >= maxTankTouched)
+        {
+            StartCoroutine(WallActivateDelay());
+            nbTankTouched = 0;
+        }
+        else
+        {
+            nbTankTouched++;
+        }
+    }
+    
+    public IEnumerator WallActivateDelay()
+    {
+        wall.SetActive(true);
+        yield return new WaitForSeconds(7);
+        wall.SetActive(false);
     }
 
    
