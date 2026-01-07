@@ -7,8 +7,6 @@ public class Bumper : MonoBehaviour
 {
     [SerializeField] float strength = 10f;
     [SerializeField] private int score = 10;
-    [SerializeField] private Animation anim;
-    [SerializeField] GameObject bumperSpawn;
     [SerializeField] private int power;
     
     [SerializeField] private GameObject menu;
@@ -35,12 +33,7 @@ public class Bumper : MonoBehaviour
         ScoreManager.instance.AddScore(score);
         other.gameObject.GetComponent<Ball>().LoseBallLife(power);
         
-
-        if (anim == null)
-        {
-            return;
-        }
-        anim.Play();
+        
         
         
     }
@@ -66,7 +59,9 @@ public class Bumper : MonoBehaviour
 
     public void SpawnBumperAssassin()
     {
-        (gameObject.transform.parent.position, bumperAssassin.transform.parent.position) = (bumperAssassin.transform.parent.position, gameObject.transform.parent.position);
+        Vector3 tempPosition = transform.parent.position;
+        Destroy(gameObject);
+        Instantiate(bumperAssassin, tempPosition, Quaternion.identity);
         menu.SetActive(!menuOpen);
         Time.timeScale = 1;
         isChanged = true;
@@ -74,7 +69,9 @@ public class Bumper : MonoBehaviour
     }
     public void SpawnBumperChevalier()
     {
-        (gameObject.transform.parent.position, bumperChevalier.transform.parent.position) = (bumperChevalier.transform.parent.position, gameObject.transform.parent.position);
+        Vector3 tempPosition = transform.parent.position;
+        Destroy(gameObject);
+        Instantiate(bumperChevalier, tempPosition, Quaternion.identity);
         menu.SetActive(!menuOpen);
         Time.timeScale = 1;
         isChanged = true;
@@ -82,7 +79,9 @@ public class Bumper : MonoBehaviour
     
     public void SpawnBumperPretre()
     {
-        (gameObject.transform.parent.position, bumperPretre.transform.parent.position) = (bumperPretre.transform.parent.position, gameObject.transform.parent.position);
+        Vector3 tempPosition = transform.parent.position;
+        Destroy(gameObject);
+        Instantiate(bumperPretre, tempPosition, Quaternion.identity);
         menu.SetActive(!menuOpen);
         Time.timeScale = 1;
         isChanged = true;
@@ -90,7 +89,9 @@ public class Bumper : MonoBehaviour
     
     public void SpawnBumperTank()
     {
-        (gameObject.transform.parent.position, bumperTank.transform.parent.position) = (bumperTank.transform.parent.position, gameObject.transform.parent.position);
+        Vector3 tempPosition = transform.parent.position;
+        Destroy(gameObject);
+        Instantiate(bumperTank, tempPosition, Quaternion.identity);
         menu.SetActive(!menuOpen);
         Time.timeScale = 1;
         isChanged = true;
@@ -98,7 +99,9 @@ public class Bumper : MonoBehaviour
     
     public void SpawnBumperBerserk()
     {
-        (gameObject.transform.parent.position, bumperBerserk.transform.parent.position) = (bumperBerserk.transform.parent.position, gameObject.transform.parent.position);
+        Vector3 tempPosition = transform.parent.position;
+        Destroy(gameObject);
+        Instantiate(bumperBerserk, tempPosition, Quaternion.identity);
         menu.SetActive(!menuOpen);
         Time.timeScale = 1;
         isChanged = true;

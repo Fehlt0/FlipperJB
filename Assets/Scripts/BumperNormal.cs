@@ -6,7 +6,6 @@ public class BumperNormal : MonoBehaviour
     public float strength = 1;
     [SerializeField] private int score = 10;
     [SerializeField] private GameObject menu;
-    [SerializeField] private bool menuOpen;
     [SerializeField] private int power;
 
     void OnCollisionEnter(Collision other)
@@ -23,25 +22,5 @@ public class BumperNormal : MonoBehaviour
 
         other.rigidbody.AddForce(direction * strength);
         ScoreManager.instance.AddScore(score);
-    }
-    
-    void OnMouseDown()
-    {
-        OpenCloseMenu();
-    }
-    
-    public void OpenCloseMenu()
-    {
-        menuOpen = !menuOpen;
-        menu.SetActive(menuOpen);
-
-        if (menuOpen)
-        {
-            Time.timeScale = 0;
-        }
-        else
-        { 
-            Time.timeScale = 1;
-        }
     }
 }
